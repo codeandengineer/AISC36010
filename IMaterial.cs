@@ -1,4 +1,4 @@
-namespace AISC3602010
+namespace AISC36010
 {
     public interface IMaterial
     {

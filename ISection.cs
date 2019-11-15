@@ -1,4 +1,7 @@
-public interface ISection
+namespace AISC36010
 {
+    public interface ISection
+    {
 
+    }
 }
