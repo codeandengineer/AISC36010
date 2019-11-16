@@ -1,4 +1,6 @@
-using Enums;
+using System;
+using System.Linq;
+
 namespace AISC36010
 {
     public class CmBuiltupIClassification : ICmClassificaiton
@@ -11,7 +13,13 @@ namespace AISC36010
             this._material = material;
         }
 
-        private double kc => Math.Min(0.76, Math.Max(0.35, 4 / Math.Sqrt(_section.h / _section.tw)));
+        private double kc
+        {
+            get
+            {
+               return Math.Min(0.76, Math.Max(0.35, 4 / Math.Sqrt(_section.h / _section.tw)));
+            }
+        }
         public CmClass UnstiffenedElements
         {
             get
@@ -40,6 +48,12 @@ namespace AISC36010
                     return CmClass.Slender;
                 }
             }
+        }
+
+
+        public CmClass Section
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 

@@ -1,0 +1,4 @@
+E:\Repositories\MemberDesign\AISC36010\bin\Debug\AISC36010.dll
+E:\Repositories\MemberDesign\AISC36010\bin\Debug\AISC36010.pdb
+E:\Repositories\MemberDesign\AISC36010\obj\Debug\AISC36010.dll
+E:\Repositories\MemberDesign\AISC36010\obj\Debug\AISC36010.pdb

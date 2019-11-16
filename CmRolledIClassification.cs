@@ -1,4 +1,5 @@
-using Enums;
+using System;
+
 namespace AISC36010
 {
     public class CmRolledIClassification : ICmClassificaiton
@@ -15,7 +16,7 @@ namespace AISC36010
         {
             get
             {
-                if (((_section.b / 2) / (_section.tf)) <= 0.56 * Math.Sqrt(Material.E / Material.Fy))
+                if (((_section.b / 2) / (_section.tf)) <= 0.56 * Math.Sqrt(_material.E / _material.Fy))
                 {
                     return CmClass.NonSlender;
                 }
@@ -30,7 +31,7 @@ namespace AISC36010
         {
             get
             {
-                if ((_section.d / _section.tw) <= 1.49 * Math.Sqrt(Material.E / Material.Fy))
+                if ((_section.d / _section.tw) <= 1.49 * Math.Sqrt(_material.E / _material.Fy))
                 {
                     return CmClass.NonSlender;
                 }
@@ -41,6 +42,23 @@ namespace AISC36010
             }
         }
 
+
+
+        public CmClass Section
+        {
+            get
+            {
+                if ((this.StiffenedElements == CmClass.NonSlender) && (this.UnstiffenedElements == CmClass.NonSlender))
+                {
+                    return CmClass.NonSlender;
+                }
+                else
+                {
+                    return CmClass.Slender;
+                }
+            }
+
+        }
     }    
 }
 

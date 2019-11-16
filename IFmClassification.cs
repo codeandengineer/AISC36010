@@ -4,5 +4,6 @@ namespace AISC36010
     {
         FmClass UnstiffenedElements { get; }
         FmClass StiffenedElements { get; }
+        FmClass Section { get; }
     }
 }

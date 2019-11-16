@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace AISC36010
 {
     public struct DesignFactors
@@ -22,24 +24,69 @@ namespace AISC36010
 
         // Factors for Axial Tension
         // Tensile Yielding
-        public static double OmegaTY => omegaTY;
+       
+        public static double OmegaTY 
+        {
+            get {
+                return omegaTY;                
+            }
+        }
 
-        public static double PhiTY => phiTY;
+        public static double PhiTY 
+        {
+            get {
+                return phiTY;
+            }
+        }
 
         // Tensile Rupture
-        public static double PhiTR => phiTR;
-
-        public static double OmegaTR => omegaTR;
+        public static double PhiTR 
+        {
+            get
+            {
+                return phiTR;
+            }
+        }
+        public static double OmegaTR
+        {
+            get
+            {
+                return omegaTR;
+            }
+        }
 
         // Factors for Axial Compression
-        public static double PhiC => phiC;
+        public static double PhiC
+        {
+            get
+            {
+                return phiC;
+            }
+        }
 
-        public static double OmegaC => omegaC;
+        public static double OmegaC
+        {
+            get
+            {
+                return omegaC;
+            }
+        }
 
         // Factors for Flexure
-        public static double PhiB => phiB;
-
-        public static double OmegaB => omegaB;
+        public static double PhiB
+        {
+            get
+            {
+                return phiB;
+            }
+        }
+        public static double OmegaB
+        {
+            get
+            {
+                return omegaB;
+            }
+        }
 
         // Factors for Shear
         // Factors for Torsion

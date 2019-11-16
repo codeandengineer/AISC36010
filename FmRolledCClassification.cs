@@ -1,3 +1,4 @@
+using System;
 namespace AISC36010
 {
     public class FmRolledCClassification : IFmClassification
@@ -47,6 +48,12 @@ namespace AISC36010
                     return FmClass.Slender;
                 }
             }
+        }
+
+
+        public FmClass Section
+        {
+            get { throw new System.NotImplementedException(); }
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Enums;
-namespace AISC36010
+﻿namespace AISC36010
 {
     public class CmRolledCHSClassification : ICmClassificaiton
     {
@@ -11,12 +10,18 @@ namespace AISC36010
             this._material = material;
         }
 
-        public CmClass UnstiffenedElements => CmClass.NonSlender;
+        public CmClass UnstiffenedElements
+        {
+            get
+            {
+                return CmClass.NonSlender;
+            }
+        }
         public CmClass StiffenedElements
         {
             get
             {
-                if ((_section.D / _section.tw) <= 0.11 * (_material.E / _material.Fy))
+                if ((_section.h / _section.tw) <= 0.11 * (_material.E / _material.Fy))
                 {
                     return CmClass.NonSlender;
                 }
@@ -25,6 +30,11 @@ namespace AISC36010
                     return CmClass.Slender;
                 }
             }
+        }
+
+        public CmClass Section
+        {
+            get { throw new System.NotImplementedException(); }
         }
     }
 }

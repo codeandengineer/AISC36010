@@ -1,4 +1,4 @@
-using Enums;
+using System;
 
 namespace AISC36010
 {
@@ -47,6 +47,12 @@ namespace AISC36010
                     return FmClass.Slender;
                 }
             }
+        }
+
+
+        public FmClass Section
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

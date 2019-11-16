@@ -13,7 +13,7 @@ namespace AISC36010
         {
             get
             {
-                
+                return FmClass.Compact;
             }
         }
 
@@ -21,8 +21,14 @@ namespace AISC36010
         {
             get
             {
-
+                return FmClass.Compact;
             }
+        }
+
+
+        public FmClass Section
+        {
+            get { throw new System.NotImplementedException(); }
         }
     }
 }
