@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AISC36010
 {
-    public class RolledISection : ISection
+    public class RolledCSection : ISection
     {
         private float _d;
         private float _h;

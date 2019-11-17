@@ -1,14 +1,14 @@
 ﻿
 namespace AISC36010
 {
-    public class E250Material : IMaterial
+    public class E250 : IMaterial
     {
         private string _Grade;
         private double _E;
         private double _G;
         private float _Fy;
         private float _Fu;
-        public E250Material(string grade, double elasticModulus, float yieldStress, float ultimateStress)
+        public E250(string grade, double elasticModulus, float yieldStress, float ultimateStress)
         {
             this._Grade = grade;
             this._E = elasticModulus;

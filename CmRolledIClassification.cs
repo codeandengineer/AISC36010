@@ -4,12 +4,12 @@ namespace AISC36010
 {
     public class CmRolledIClassification : ICmClassificaiton
     {
-        private ISection _section;
+        private RolledISection _section;
         private IMaterial _material;
 
         public CmRolledIClassification(ISection section, IMaterial material)
         {
-            this._section = section;
+            this._section = (RolledISection) section;
             this._material = material;
         }
         public CmClass UnstiffenedElements

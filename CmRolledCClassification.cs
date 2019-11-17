@@ -3,11 +3,11 @@ namespace AISC36010
 {
     public class CmRolledCClassification : ICmClassificaiton
     {
-        private ISection _section;
+        private RolledCSection _section;
         private IMaterial _material;
         public CmRolledCClassification(ISection section, IMaterial material)
         {
-            this._section = section;
+            this._section = (RolledCSection) section;
             this._material = material;
         }
 
